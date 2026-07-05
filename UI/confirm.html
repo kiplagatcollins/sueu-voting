@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirm Ballot | SUEU</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{brand:{50:'#f0fdf4',100:'#dcfce7',200:'#bbf7d0',300:'#86efac',400:'#4ade80',500:'#28a745',600:'#218838',700:'#1a6b2e',800:'#145224',900:'#0f3d1b'}}}}}</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>body{font-family:'Inter',sans-serif;background:#f4f7f6}</style>
+</head>
+<body class="min-h-screen py-10 px-4">
+  <nav class="max-w-2xl mx-auto mb-6 bg-white rounded-xl shadow-sm px-6 py-4 flex items-center justify-between">
+    <img src="images/logo.png" alt="Egerton Logo" class="h-10">
+    <span class="text-sm text-gray-500 font-semibold">Step 2: Final Confirmation</span>
+  </nav>
+  <div class="w-full max-w-xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+    <div class="bg-brand-50 px-8 py-6 text-center border-b-2 border-brand-500">
+      <i class="fa-solid fa-circle-check text-brand-500 text-3xl"></i>
+      <h3 class="text-xl font-extrabold text-brand-600 mt-2">Review Your Ballot</h3>
+      <p class="text-sm text-gray-500">Please ensure these are your final choices.</p>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-left">
+        <thead>
+          <tr class="bg-gray-50 text-gray-500 text-xs uppercase tracking-wider">
+            <th class="px-6 py-4 font-semibold">Position</th>
+            <th class="px-6 py-4 font-semibold">Chosen Candidate</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100">
+          <tr><td class="px-6 py-4 text-gray-600">Chairman</td><td class="px-6 py-4 font-bold text-gray-800">Collins</td></tr>
+          <tr><td class="px-6 py-4 text-gray-600">Vice Chairman</td><td class="px-6 py-4 font-bold text-gray-800">Evans</td></tr>
+          <tr><td class="px-6 py-4 text-gray-600">Secretary General</td><td class="px-6 py-4 font-bold text-gray-800">Mavin</td></tr>
+          <tr><td class="px-6 py-4 text-gray-600">Academics</td><td class="px-6 py-4 font-bold text-gray-800">Shaddy</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="px-8 py-5 bg-gray-50 flex items-center justify-between">
+      <a href="ballot.html" class="text-gray-500 hover:text-red-500 transition text-sm font-medium"><i class="fa fa-arrow-left"></i> Edit Choices</a>
+      <button onclick="document.getElementById('confirmModal').classList.remove('hidden')" class="bg-brand-500 hover:bg-brand-600 text-white font-bold py-3 px-8 rounded-lg shadow-sm transition">Cast Vote</button>
+    </div>
+  </div>
+  <div id="confirmModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+    <div class="bg-white rounded-2xl max-w-sm w-full p-8 text-center shadow-2xl">
+      <i class="fa-solid fa-shield-halved text-yellow-500 text-5xl mb-4"></i>
+      <h4 class="text-lg font-extrabold text-gray-800 mb-2">Final Submission</h4>
+      <p class="text-sm text-gray-600 mb-6">Once you click <strong>Confirm</strong>, your vote will be encrypted and submitted. This action cannot be undone.</p>
+      <div class="flex gap-3 justify-center">
+        <button onclick="document.getElementById('confirmModal').classList.add('hidden')" class="px-6 py-2.5 border border-gray-300 rounded-lg text-gray-600 font-medium hover:bg-gray-50 transition">Go Back</button>
+        <a href="success.html" class="px-6 py-2.5 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-lg transition">Confirm &amp; Submit</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

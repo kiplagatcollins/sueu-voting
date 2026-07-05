@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Ballot | SUEU</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{brand:{50:'#f0fdf4',100:'#dcfce7',200:'#bbf7d0',300:'#86efac',400:'#4ade80',500:'#28a745',600:'#218838',700:'#1a6b2e',800:'#145224',900:'#0f3d1b'}}}}}</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body{font-family:'Inter',sans-serif;background:#f0f2f5;padding-top:80px}
+    input[type="radio"]:checked+div{border-color:#28a745;background:#f8fff9}
+  </style>
+</head>
+<body>
+  <nav class="fixed top-0 left-0 right-0 bg-white shadow-sm px-6 py-3 flex items-center gap-3 z-50">
+    <img src="images/logo.png" alt="logo" class="h-9">
+    <span class="font-bold text-brand-600 text-lg tracking-wide">SUEU DIGITAL BALLOT</span>
+  </nav>
+  <div class="max-w-6xl mx-auto px-4 pb-12">
+    <form action="confirm.html">
+      <div class="bg-brand-500 text-white px-5 py-3 rounded-lg font-bold uppercase tracking-wider text-sm mt-4">Chairman</div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+        <label class="cursor-pointer">
+          <input type="radio" name="chairman" value="Evans" class="hidden" required>
+          <div class="bg-white rounded-xl p-4 text-center border-2 border-transparent transition-all duration-200 hover:shadow-md hover:-translate-y-1">
+            <img src="images/_DSC0909.JPG" class="w-24 h-24 object-cover rounded-full mx-auto mb-3 border-4 border-gray-100">
+            <span class="font-bold text-gray-800 block">Evans</span>
+            <span class="text-xs text-gray-400">Select Candidate</span>
+          </div>
+        </label>
+        <label class="cursor-pointer">
+          <input type="radio" name="chairman" value="Collins" class="hidden">
+          <div class="bg-white rounded-xl p-4 text-center border-2 border-transparent transition-all duration-200 hover:shadow-md hover:-translate-y-1">
+            <img src="images/_DSC0497.JPG" class="w-24 h-24 object-cover rounded-full mx-auto mb-3 border-4 border-gray-100">
+            <span class="font-bold text-gray-800 block">Collins</span>
+            <span class="text-xs text-gray-400">Select Candidate</span>
+          </div>
+        </label>
+      </div>
+      <div class="bg-brand-500 text-white px-5 py-3 rounded-lg font-bold uppercase tracking-wider text-sm mt-8">Vice Chairman</div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+        <label class="cursor-pointer">
+          <input type="radio" name="vice_chairman" value="Evans_V" class="hidden" required>
+          <div class="bg-white rounded-xl p-4 text-center border-2 border-transparent transition-all duration-200 hover:shadow-md hover:-translate-y-1">
+            <img src="images/_DSC0909.JPG" class="w-24 h-24 object-cover rounded-full mx-auto mb-3 border-4 border-gray-100">
+            <span class="font-bold text-gray-800 block">Evans</span>
+            <span class="text-xs text-gray-400">Select Candidate</span>
+          </div>
+        </label>
+        <label class="cursor-pointer">
+          <input type="radio" name="vice_chairman" value="Collins_V" class="hidden">
+          <div class="bg-white rounded-xl p-4 text-center border-2 border-transparent transition-all duration-200 hover:shadow-md hover:-translate-y-1">
+            <img src="images/_DSC0497.JPG" class="w-24 h-24 object-cover rounded-full mx-auto mb-3 border-4 border-gray-100">
+            <span class="font-bold text-gray-800 block">Collins</span>
+            <span class="text-xs text-gray-400">Select Candidate</span>
+          </div>
+        </label>
+      </div>
+      <div class="text-center mt-8">
+        <button type="submit" class="bg-brand-500 hover:bg-brand-600 text-white font-bold py-4 px-12 rounded-full text-lg shadow-lg transition duration-200 transform hover:-translate-y-0.5">Review &amp; Cast Vote</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

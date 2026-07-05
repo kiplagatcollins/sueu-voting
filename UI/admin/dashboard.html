@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | SUEU</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{brand:{50:'#f0fdf4',100:'#dcfce7',200:'#bbf7d0',300:'#86efac',400:'#4ade80',500:'#28a745',600:'#218838',700:'#1a6b2e',800:'#145224',900:'#0f3d1b'}}}}}</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>body{font-family:'Inter',sans-serif;background:#f3f4f6}*{margin:0;padding:0;box-sizing:border-box}</style>
+</head>
+<body class="flex min-h-screen">
+  <aside class="w-64 bg-brand-800 text-white flex-shrink-0 flex flex-col">
+    <div class="p-5 border-b border-brand-700">
+      <img src="../images/logo.png" alt="Egerton" class="h-10 brightness-0 invert">
+      <p class="text-xs text-brand-200 mt-1 font-semibold">Admin Panel</p>
+    </div>
+    <nav class="flex-1 p-4 space-y-1">
+      <a href="dashboard.html" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-brand-700 text-white font-medium"><i class="fa-solid fa-gauge w-5"></i> Dashboard</a>
+      <a href="contestants.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-brand-200 hover:bg-brand-700 hover:text-white transition"><i class="fa-solid fa-users w-5"></i> Contestants</a>
+      <a href="voters.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-brand-200 hover:bg-brand-700 hover:text-white transition"><i class="fa-solid fa-user-check w-5"></i> Voters</a>
+      <a href="results-admin.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-brand-200 hover:bg-brand-700 hover:text-white transition"><i class="fa-solid fa-chart-bar w-5"></i> Results</a>
+    </nav>
+    <div class="p-4 border-t border-brand-700">
+      <a href="../login.html" class="flex items-center gap-3 px-4 py-3 text-brand-200 hover:text-white transition text-sm"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </div>
+  </aside>
+  <main class="flex-1 p-8">
+    <div class="flex items-center justify-between mb-8">
+      <h1 class="text-2xl font-extrabold text-gray-800">Dashboard</h1>
+      <span class="text-sm text-gray-500">Election Officer</span>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100"><div class="flex items-center gap-4"><div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center"><i class="fa-solid fa-users text-blue-600 text-xl"></i></div><div><p class="text-sm text-gray-500">Total Voters</p><p class="text-2xl font-extrabold text-gray-800">12,450</p></div></div></div>
+      <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100"><div class="flex items-center gap-4"><div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center"><i class="fa-solid fa-check-circle text-green-600 text-xl"></i></div><div><p class="text-sm text-gray-500">Votes Cast</p><p class="text-2xl font-extrabold text-gray-800">10,200</p></div></div></div>
+      <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100"><div class="flex items-center gap-4"><div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center"><i class="fa-solid fa-briefcase text-purple-600 text-xl"></i></div><div><p class="text-sm text-gray-500">Positions</p><p class="text-2xl font-extrabold text-gray-800">8</p></div></div></div>
+      <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100"><div class="flex items-center gap-4"><div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center"><i class="fa-solid fa-percentage text-orange-600 text-xl"></i></div><div><p class="text-sm text-gray-500">Turnout</p><p class="text-2xl font-extrabold text-gray-800">81.9%</p></div></div></div>
+    </div>
+    <div class="mt-8 bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+      <h2 class="font-bold text-gray-800 mb-4">Recent Activity</h2>
+      <ul class="space-y-3 text-sm text-gray-600">
+        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-green-500 rounded-full"></span> Voter S13/12345/21 cast their vote</li>
+        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-green-500 rounded-full"></span> New contestant registered: Evans (Chairman)</li>
+        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-green-500 rounded-full"></span> Voter S13/67890/21 cast their vote</li>
+        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-blue-500 rounded-full"></span> Admin updated election schedule</li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>

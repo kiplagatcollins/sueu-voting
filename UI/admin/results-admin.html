@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results | SUEU Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{brand:{50:'#f0fdf4',100:'#dcfce7',200:'#bbf7d0',300:'#86efac',400:'#4ade80',500:'#28a745',600:'#218838',700:'#1a6b2e',800:'#145224',900:'#0f3d1b'}}}}}</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>body{font-family:'Inter',sans-serif;background:#f3f4f6}</style>
+</head>
+<body class="flex min-h-screen">
+  <aside class="w-64 bg-brand-800 text-white flex-shrink-0 flex flex-col">
+    <div class="p-5 border-b border-brand-700"><img src="../images/logo.png" alt="Egerton" class="h-10 brightness-0 invert"><p class="text-xs text-brand-200 mt-1 font-semibold">Admin Panel</p></div>
+    <nav class="flex-1 p-4 space-y-1">
+      <a href="dashboard.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-brand-200 hover:bg-brand-700 hover:text-white transition"><i class="fa-solid fa-gauge w-5"></i> Dashboard</a>
+      <a href="contestants.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-brand-200 hover:bg-brand-700 hover:text-white transition"><i class="fa-solid fa-users w-5"></i> Contestants</a>
+      <a href="voters.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-brand-200 hover:bg-brand-700 hover:text-white transition"><i class="fa-solid fa-user-check w-5"></i> Voters</a>
+      <a href="results-admin.html" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-brand-700 text-white font-medium"><i class="fa-solid fa-chart-bar w-5"></i> Results</a>
+    </nav>
+    <div class="p-4 border-t border-brand-700"><a href="../login.html" class="flex items-center gap-3 px-4 py-3 text-brand-200 hover:text-white transition text-sm"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></div>
+  </aside>
+  <main class="flex-1 p-8">
+    <div class="flex items-center justify-between mb-8">
+      <h1 class="text-2xl font-extrabold text-gray-800">Election Results</h1>
+      <div class="flex gap-3">
+        <select class="px-4 py-2.5 border border-gray-300 rounded-lg text-sm bg-white focus:ring-2 focus:ring-brand-500 outline-none"><option>All Positions</option><option>Chairman</option><option>Vice Chairman</option></select>
+        <button class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-2.5 px-4 rounded-lg text-sm transition"><i class="fa-solid fa-download"></i> Export</button>
+      </div>
+    </div>
+    <div class="space-y-8">
+      <section>
+        <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2"><span class="w-2 h-6 bg-brand-500 rounded-full"></span>Chairman</h2>
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+          <table class="w-full text-left">
+            <thead><tr class="bg-gray-50 text-gray-500 text-xs uppercase tracking-wider"><th class="px-6 py-4 font-semibold">Rank</th><th class="px-6 py-4 font-semibold">Candidate</th><th class="px-6 py-4 font-semibold">Votes</th><th class="px-6 py-4 font-semibold">Percentage</th></tr></thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr class="bg-green-50/50"><td class="px-6 py-4"><span class="flex items-center justify-center w-8 h-8 bg-green-500 text-white rounded-full font-bold text-sm">1</span></td><td class="px-6 py-4 font-bold text-green-900">Collins</td><td class="px-6 py-4 font-bold text-green-700">2,500</td><td class="px-6 py-4 text-green-700 font-medium">48.1%</td></tr>
+              <tr class="bg-blue-50/30"><td class="px-6 py-4"><span class="flex items-center justify-center w-8 h-8 bg-blue-500 text-white rounded-full font-bold text-sm">2</span></td><td class="px-6 py-4 font-semibold text-blue-900">Rono</td><td class="px-6 py-4 font-semibold text-blue-700">2,600</td><td class="px-6 py-4 text-blue-700">46.2%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section>
+        <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2"><span class="w-2 h-6 bg-brand-500 rounded-full"></span>Vice Chairman</h2>
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+          <table class="w-full text-left">
+            <thead><tr class="bg-gray-50 text-gray-500 text-xs uppercase tracking-wider"><th class="px-6 py-4 font-semibold">Rank</th><th class="px-6 py-4 font-semibold">Candidate</th><th class="px-6 py-4 font-semibold">Votes</th><th class="px-6 py-4 font-semibold">Percentage</th></tr></thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr class="bg-green-50/50"><td class="px-6 py-4"><span class="flex items-center justify-center w-8 h-8 bg-green-500 text-white rounded-full font-bold text-sm">1</span></td><td class="px-6 py-4 font-bold text-green-900">Evans</td><td class="px-6 py-4 font-bold text-green-700">2,800</td><td class="px-6 py-4 text-green-700 font-medium">57.1%</td></tr>
+              <tr class="bg-blue-50/30"><td class="px-6 py-4"><span class="flex items-center justify-center w-8 h-8 bg-blue-500 text-white rounded-full font-bold text-sm">2</span></td><td class="px-6 py-4 font-semibold text-blue-900">Mavin</td><td class="px-6 py-4 font-semibold text-blue-700">2,100</td><td class="px-6 py-4 text-blue-700">42.9%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

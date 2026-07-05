@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vote Submitted | SUEU</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{brand:{50:'#f0fdf4',100:'#dcfce7',200:'#bbf7d0',300:'#86efac',400:'#4ade80',500:'#28a745',600:'#218838',700:'#1a6b2e',800:'#145224',900:'#0f3d1b'}}}}}</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>body{font-family:'Inter',sans-serif;background:#f0f2f5}</style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+  <div class="w-full max-w-md bg-white rounded-2xl shadow-lg p-10 text-center">
+    <div class="w-20 h-20 bg-brand-100 rounded-full flex items-center justify-center mx-auto mb-6">
+      <i class="fa-solid fa-check text-brand-500 text-4xl"></i>
+    </div>
+    <h1 class="text-2xl font-extrabold text-gray-800">Vote Recorded!</h1>
+    <p class="text-gray-500 mt-2">Your vote has been successfully encrypted and submitted.</p>
+    <div class="bg-gray-50 rounded-lg px-4 py-3 mt-6 text-sm text-gray-600">
+      <span class="font-semibold">Receipt:</span> SUEU-2026-<span class="font-mono">A7X3K9</span>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">Keep this receipt for your records.</p>
+    <div class="mt-8 space-y-3">
+      <a href="results.html" class="block w-full bg-brand-500 hover:bg-brand-600 text-white font-bold py-3 rounded-lg transition">View Live Results</a>
+      <a href="login.html" class="block w-full border border-gray-300 hover:bg-gray-50 text-gray-600 font-medium py-3 rounded-lg transition">Logout</a>
+    </div>
+  </div>
+</body>
+</html>

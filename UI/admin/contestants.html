@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contestants | SUEU Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{brand:{50:'#f0fdf4',100:'#dcfce7',200:'#bbf7d0',300:'#86efac',400:'#4ade80',500:'#28a745',600:'#218838',700:'#1a6b2e',800:'#145224',900:'#0f3d1b'}}}}}</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>body{font-family:'Inter',sans-serif;background:#f3f4f6}</style>
+</head>
+<body class="flex min-h-screen">
+  <aside class="w-64 bg-brand-800 text-white flex-shrink-0 flex flex-col">
+    <div class="p-5 border-b border-brand-700"><img src="../images/logo.png" alt="Egerton" class="h-10 brightness-0 invert"><p class="text-xs text-brand-200 mt-1 font-semibold">Admin Panel</p></div>
+    <nav class="flex-1 p-4 space-y-1">
+      <a href="dashboard.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-brand-200 hover:bg-brand-700 hover:text-white transition"><i class="fa-solid fa-gauge w-5"></i> Dashboard</a>
+      <a href="contestants.html" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-brand-700 text-white font-medium"><i class="fa-solid fa-users w-5"></i> Contestants</a>
+      <a href="voters.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-brand-200 hover:bg-brand-700 hover:text-white transition"><i class="fa-solid fa-user-check w-5"></i> Voters</a>
+      <a href="results-admin.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-brand-200 hover:bg-brand-700 hover:text-white transition"><i class="fa-solid fa-chart-bar w-5"></i> Results</a>
+    </nav>
+    <div class="p-4 border-t border-brand-700"><a href="../login.html" class="flex items-center gap-3 px-4 py-3 text-brand-200 hover:text-white transition text-sm"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></div>
+  </aside>
+  <main class="flex-1 p-8">
+    <div class="flex items-center justify-between mb-8">
+      <h1 class="text-2xl font-extrabold text-gray-800">Contestants</h1>
+      <button onclick="document.getElementById('addModal').classList.remove('hidden')" class="bg-brand-500 hover:bg-brand-600 text-white font-semibold py-2.5 px-5 rounded-lg transition text-sm"><i class="fa-solid fa-plus"></i> Add Contestant</button>
+    </div>
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      <table class="w-full text-left">
+        <thead><tr class="bg-gray-50 text-gray-500 text-xs uppercase tracking-wider"><th class="px-6 py-4 font-semibold">Photo</th><th class="px-6 py-4 font-semibold">Name</th><th class="px-6 py-4 font-semibold">Position</th><th class="px-6 py-4 font-semibold">Faculty</th><th class="px-6 py-4 font-semibold text-right">Actions</th></tr></thead>
+        <tbody class="divide-y divide-gray-100">
+          <tr class="hover:bg-gray-50"><td class="px-6 py-4"><img src="../images/_DSC0497.JPG" class="w-10 h-10 rounded-full object-cover"></td><td class="px-6 py-4 font-medium text-gray-800">Collins</td><td class="px-6 py-4 text-gray-600">Chairman</td><td class="px-6 py-4 text-gray-600">Science</td><td class="px-6 py-4 text-right"><button class="text-blue-600 hover:text-blue-800 mr-3"><i class="fa-solid fa-pen"></i></button><button class="text-red-500 hover:text-red-700"><i class="fa-solid fa-trash"></i></button></td></tr>
+          <tr class="hover:bg-gray-50"><td class="px-6 py-4"><img src="../images/_DSC0909.JPG" class="w-10 h-10 rounded-full object-cover"></td><td class="px-6 py-4 font-medium text-gray-800">Evans</td><td class="px-6 py-4 text-gray-600">Vice Chairman</td><td class="px-6 py-4 text-gray-600">Education</td><td class="px-6 py-4 text-right"><button class="text-blue-600 hover:text-blue-800 mr-3"><i class="fa-solid fa-pen"></i></button><button class="text-red-500 hover:text-red-700"><i class="fa-solid fa-trash"></i></button></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <div id="addModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-8 shadow-2xl">
+      <h3 class="text-lg font-extrabold text-gray-800 mb-4">Add Contestant</h3>
+      <form class="space-y-4">
+        <div><label class="block text-sm font-semibold text-gray-700 mb-1">Full Name</label><input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 outline-none"></div>
+        <div><label class="block text-sm font-semibold text-gray-700 mb-1">Position</label><select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 outline-none bg-white"><option>Chairman</option><option>Vice Chairman</option><option>Secretary General</option></select></div>
+        <div><label class="block text-sm font-semibold text-gray-700 mb-1">Faculty</label><select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 outline-none bg-white"><option>Science</option><option>Education</option><option>Agriculture</option></select></div>
+        <div class="flex gap-3 justify-end pt-2">
+          <button type="button" onclick="document.getElementById('addModal').classList.add('hidden')" class="px-6 py-2.5 border border-gray-300 rounded-lg text-gray-600 font-medium hover:bg-gray-50">Cancel</button>
+          <button type="submit" class="px-6 py-2.5 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-lg">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
